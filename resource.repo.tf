@@ -2,8 +2,7 @@ resource "github_repository" "meta_tf" {
   name         = "meta-tf"
   description  = "It's a GitHub repo, about GitHub repos!"
   homepage_url = "https://knowyourmeme.com/memes/xzibit-yo-dawg"
-
-  private = false
+  visibility   = "public"
 
   has_downloads = false
   has_issues    = false
