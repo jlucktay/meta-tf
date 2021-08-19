@@ -8,4 +8,6 @@ resource "github_repository" "meta_tf" {
   has_issues    = false
   has_projects  = false
   has_wiki      = false
+
+  vulnerability_alerts = true
 }
