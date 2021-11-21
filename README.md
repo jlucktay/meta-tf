@@ -4,7 +4,11 @@ Managing GitHub repos with some Terraform from inside a GitHub repo.
 
 ## TODO
 
-- Get output from [here](https://github.com/jlucktay/golang-workbench/tree/master/graphql/github) and use as input into
-  a [dynamic block](https://www.terraform.io/docs/configuration/expressions/dynamic-blocks.html) to wrangle my repos
-  and those I have forked, to normalise some attributes/behaviours/settings around all repos.
+- ~~Get output from [here](https://github.com/jlucktay/my-github-repos) and use as input into~~
+  ~~a [for_each](https://www.terraform.io/docs/language/meta-arguments/for_each.html) to wrangle my repos~~
+  ~~and those I have forked, to normalise some attributes/behaviours/settings around all repos.~~
+  - ~~a [`data` block](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/repositories#argument-reference)~~
+    ~~won't do the trick here, because the sort options are so limited~~
+  - ~~the [`my-github-repos` tool](https://github.com/jlucktay/my-github-repos) will return repositories sorted by creation date~~
+    - ~~to get this working with Terraform Cloud: <https://www.terraform.io/docs/cloud/run/install-software.html#only-install-standalone-binaries>~~
 - Rename default branches to `main`: <https://jarv.is/notes/github-rename-master/>

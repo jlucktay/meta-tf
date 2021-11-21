@@ -11,3 +11,9 @@ resource "github_repository" "meta_tf" {
 
   vulnerability_alerts = true
 }
+
+resource "github_repository" "source_repos" {
+  for_each = toset(split(",", data.external.github.result["sources"]))
+
+  name = each.key
+}
