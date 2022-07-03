@@ -2,9 +2,14 @@ terraform {
   required_version = ">= 1.0.11"
 
   required_providers {
+    external = {
+      source = "hashicorp/external"
+      version = "~> 2"
+    }
+
     github = {
       source  = "integrations/github"
-      version = "~> 4.18.0"
+      version = "~> 4"
     }
   }
 }

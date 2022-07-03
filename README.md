@@ -2,6 +2,15 @@
 
 Managing GitHub repos with some Terraform from inside a GitHub repo.
 
+## Workflow
+
+```shell
+$ terraform init --upgrade
+...
+Terraform has been successfully initialized!
+...
+```
+
 ## TODO
 
 - ~~Get output from [here](https://github.com/jlucktay/my-github-repos) and use as input into~~
