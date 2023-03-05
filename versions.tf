@@ -9,7 +9,7 @@ terraform {
 
     github = {
       source  = "integrations/github"
-      version = "~> 4"
+      version = "~> 5"
     }
   }
 }

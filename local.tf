@@ -79,6 +79,8 @@ locals {
     "meta-tf" = false
   }
 
+  source_repo_has_discussions = {}
+
   source_repo_has_projects = {
     "meta-tf" = false
   }
