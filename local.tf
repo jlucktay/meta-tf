@@ -230,4 +230,67 @@ locals {
       "terraform",
     ]
   }
+
+  fork_repo_description = {
+    "chainsaw"                   = "Declarative K8s e2e testing"
+    "extentreports-csharp"       = "Open-source reports API for .NET"
+    "git_training"               = "An interactive git training meant to teach you how git works, not just which commands to execute"
+    "go-github-mock"             = "A library to aid unittesting code that uses Golang's Github SDK"
+    "golang-tmdb"                = "This is a Golang wrapper for working with TMDb API. It aims to support version 3."
+    "gophercon-uk-2023"          = "GopherCon UK 2023"
+    "jsonschema"                 = "JSONSchema (draft 2020-12, draft 2019-09, draft-7, draft-6, draft-4) Validation using Go"
+    "newrustacean.com"           = "The official website for the New Rustacean podcast"
+    "patchwork"                  = "All the Git-it Workshop completers! "
+    "rsync-time-backup"          = "Time Machine style backup with rsync."
+    "rustlings"                  = ":crab: Small exercises to get you used to reading and writing Rust code!"
+    "saw"                        = "Fast, multi-purpose tool for AWS CloudWatch Logs"
+    "task"                       = "A task runner / simpler Make alternative written in Go"
+    "training-kit"               = "Open source cheat sheets for Git and GitHub"
+    "tyk-k8s"                    = "Kubernetes ingress controller and sidecar injector for Tyk API Gateway"
+    "Win10-Initial-Setup-Script" = "PowerShell script for automation of routine tasks done after fresh installations of Windows 10 / Windows Server 2016"
+    "zxcvbn-go"                  = "Implementation of the zxcvbn password complexity algorithm in Go"
+  }
+
+  fork_repo_homepage_url = {
+    "chainsaw"             = "https://kyverno.github.io/chainsaw/"
+    "extentreports-csharp" = "http://extentreports.relevantcodes.com/"
+    "golang-web-dev"       = "https://www.udemy.com/course/go-programming-language/"
+    "newrustacean.com"     = "https://www.newrustacean.com/"
+    "patchwork"            = "http://jlord.github.io/patchwork"
+    "task"                 = "https://taskfile.dev"
+    "training-kit"         = "https://github.github.com/training-kit/"
+    "tyk-k8s"              = "https://tyk.io"
+  }
+
+  fork_repo_archived = {
+    "extentreports-csharp"       = true
+    "git_training"               = true
+    "golang-web-dev"             = true
+    "patchwork"                  = true
+    "rsync-time-backup"          = true
+    "saw"                        = true
+    "training-kit"               = true
+    "tyk-k8s"                    = true
+    "Win10-Initial-Setup-Script" = true
+  }
+
+  fork_repo_has_issues = {}
+
+  fork_repo_has_discussions = {}
+
+  fork_repo_has_projects = {}
+
+  fork_repo_has_wiki = {}
+
+  fork_repo_is_template = {}
+
+  fork_repo_has_downloads = {}
+
+  fork_repo_topics = {
+    "zxcvbn-go" = [
+      "go",
+      "password-strength-estimator",
+      "xkcd",
+    ]
+  }
 }

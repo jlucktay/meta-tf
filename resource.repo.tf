@@ -49,3 +49,56 @@ resource "github_repository" "source_repos" {
     ]
   }
 }
+
+resource "github_repository" "fork_repos" {
+  for_each = toset(split(",", data.external.my_github_repos.result["forks"]))
+
+  name         = each.key
+  description  = lookup(local.fork_repo_description, each.key, "")
+  homepage_url = lookup(local.fork_repo_homepage_url, each.key, "")
+
+  visibility = lookup(local.fork_repo_visibility, each.key, "public")
+
+  has_issues      = lookup(local.fork_repo_has_issues, each.key, true)
+  has_discussions = lookup(local.fork_repo_has_discussions, each.key, true)
+  has_projects    = lookup(local.fork_repo_has_projects, each.key, true)
+  has_wiki        = lookup(local.fork_repo_has_wiki, each.key, true)
+
+  is_template = lookup(local.fork_repo_is_template, each.key, false)
+
+  allow_merge_commit = false
+  allow_squash_merge = true
+  allow_rebase_merge = false
+  allow_auto_merge   = true
+
+  squash_merge_commit_title   = "COMMIT_OR_PR_TITLE"
+  squash_merge_commit_message = "COMMIT_MESSAGES"
+
+  delete_branch_on_merge = true
+
+  has_downloads = lookup(local.fork_repo_has_downloads, each.key, true)
+
+  archived = lookup(local.fork_repo_archived, each.key, false)
+
+  security_and_analysis {
+    secret_scanning {
+      status = "enabled"
+    }
+
+    # https://github.blog/2023-05-09-push-protection-is-generally-available-and-free-for-all-public-repositories/
+    secret_scanning_push_protection {
+      status = "enabled"
+    }
+  }
+
+  topics = lookup(local.fork_repo_topics, each.key, [])
+
+  allow_update_branch  = true
+  vulnerability_alerts = true
+
+  lifecycle {
+    ignore_changes = [
+      pages, # TODO(jlucktay): revisit
+    ]
+  }
+}
