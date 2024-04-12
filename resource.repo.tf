@@ -26,8 +26,20 @@ resource "github_repository" "source_repos" {
 
   archived = lookup(local.source_repo_archived, each.key, false)
 
+  security_and_analysis {
+    secret_scanning {
+      status = "enabled"
+    }
+
+    # https://github.blog/2023-05-09-push-protection-is-generally-available-and-free-for-all-public-repositories/
+    secret_scanning_push_protection {
+      status = "enabled"
+    }
+  }
+
   topics = lookup(local.source_repo_topics, each.key, [])
 
+  allow_update_branch  = true
   vulnerability_alerts = true
 
   lifecycle {

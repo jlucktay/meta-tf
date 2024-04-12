@@ -36,4 +36,4 @@ value stored with 1Password. Further reading
     ~~won't do the trick here, because the sort options are so limited~~
   - ~~the [`my-github-repos` tool](https://github.com/jlucktay/my-github-repos) will return repositories sorted by creation date~~
     - ~~to get this working with Terraform Cloud: <https://www.terraform.io/docs/cloud/run/install-software.html#only-install-standalone-binaries>~~
-- Rename default branches to `main`: <https://jarv.is/notes/github-rename-master/>
+- ~~Rename default branches to `main`: <https://jarv.is/notes/github-rename-master/>~~

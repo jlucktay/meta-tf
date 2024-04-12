@@ -98,12 +98,24 @@ locals {
   }
 
   source_repo_archived = {
-    "dotfiles-chezmoi"     = true
-    "jameslucktaylor.info" = true
+    "angular-quickstart"          = true
+    "broughtsauce-hello-world"    = true
+    "dotfiles-chezmoi"            = true
+    "EulerNet"                    = true
+    "freecodecamp-portfolio"      = true
+    "git-it_hello-world"          = true
+    "go-pebkac"                   = true
+    "jameslucktaylor.info"        = true
+    "jlucktay.page"               = true
+    "protractortest.org_tutorial" = true
+    "QAWorks"                     = true
+    "random_data_generator"       = true
   }
 
   source_repo_topics = {
     "adventofcode" = [
+      "advent-of-code",
+      "adventofcode",
       "christmas",
       "golang",
       "learning-by-doing",
@@ -130,8 +142,8 @@ locals {
     ]
     "factorio-server-kit" = [
       "docker",
-      "factorio",
       "factorio-server",
+      "factorio",
       "google-cloud",
       "unlicense",
       "vms",
@@ -208,5 +220,4 @@ locals {
       "template",
     ]
   }
-
 }
